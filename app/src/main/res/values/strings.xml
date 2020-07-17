@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PokeApi</string>
+    <string name="txtMenssagem">Digite o nome do pokemon</string>
+    <string name="Pesq">Pesquisar</string>
+    <string name="btnVoltar">Voltar</string>
+    <string name="txtMensg">Deseja saber mais sobre o pokemon? Click no botão abaixo!</string>
+
+</resources>

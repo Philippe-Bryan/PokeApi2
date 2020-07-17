@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MostraResult">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblIdPoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/imgPoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/lblNomePoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/lblDescPoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OnClickVoltar"
+            android:text="@string/btnVoltar"
+            android:typeface="serif"/>
+
+        <TextView
+            android:id="@+id/txtMensg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMensg"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnBusca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OnBulba"
+            android:text="@string/Pesq"
+            android:typeface="serif"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
