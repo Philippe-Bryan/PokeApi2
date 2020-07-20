@@ -42,16 +42,16 @@ public class NetworkUtils {
 
             reader = new BufferedReader(new InputStreamReader(inputStream));
 
-            StringBuilder builder = new StringBuilder();
-            String linha;
-            while ((linha = reader.readLine()) != null) {
+            //StringBuilder builder = new StringBuilder();
+            String linha = reader.readLine();
+            /* while ((linha = reader.readLine()) != null) {
                 builder.append(linha);
                 builder.append("\n");
-            }
-            if (builder.length() == 0) {
+            }*/
+            if (linha.length() == 0) {
                 return null;
             }
-            pokeJSONString = builder.toString();
+            pokeJSONString = linha;
         }catch (IOException e){
             e.printStackTrace();
         }finally {
