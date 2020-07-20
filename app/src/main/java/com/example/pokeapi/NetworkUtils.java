@@ -1,5 +1,6 @@
 package com.example.pokeapi;
 
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
 
@@ -8,25 +9,30 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class NetworkUtils {
     private  static final String LOG_TAG = NetworkUtils.class.getSimpleName();
-    private static final String POKEMON_URL = "https://pokeapi.co/api/v2/pokemon";
-    private static final String QUERY_PARAM = "pokemon";
-    private static final String MAX_RESULTS = "maxResults";
+    private static final String POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/";
+    //private static final String QUERY_PARAM = "pokemon";
+    //private static final String MAX_RESULTS = "maxResults";
     //private static final String TIP_IMPRESS = "previous";
     static String buscaInfosPokemon(String queryString){
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         String pokeJSONString = null;
         try {
-            Uri builtURI = Uri.parse(POKEMON_URL).buildUpon()
-                    .appendQueryParameter(QUERY_PARAM, queryString)
-                    .appendQueryParameter(MAX_RESULTS, "1")
+            //Uri builtURI = Uri.parse(POKEMON_URL).buildUpon()
+                    //.appendQueryParameter(QUERY_PARAM, queryString)
+                    //.appendQueryParameter(MAX_RESULTS, "1")
                     //.appendQueryParameter(TIP_IMPRESS, "name")
-                    .build();
-            URL requestURL = new URL(builtURI.toString());
+                    //.build();
+            //URL requestURL = new URL(builtURI.toString());
+
+            String p = POKEMON_URL;
+            p = p.concat(queryString);
+            URL requestURL = new URL(p);
 
             urlConnection = (HttpURLConnection) requestURL.openConnection();
             urlConnection.setRequestMethod("GET");
